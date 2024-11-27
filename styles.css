@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(45deg, red, green, blue, purple, cyan, yellow); /* Gradiente com cores RGB */
+    background-size: 400% 400%;
+    animation: gradientAnimation 10s ease infinite; /* Animação do gradiente */
+    color: white;
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+    color: white;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6); /* Sombra para destacar o título */
+}
+
+.video-catalog {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.video-item {
+    background-color: rgba(255, 255, 255, 0.9); /* Fundo branco semi-transparente */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.video-item:hover {
+    transform: scale(1.05);
+}
+
+.video-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.video-title {
+    padding: 15px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #f8f8f8;
+    border-top: 1px solid #eee;
+    font-weight: bold;
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
